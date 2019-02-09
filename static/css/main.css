@@ -3,6 +3,7 @@
     --secondary-color: #363636;
     --third-color: white;
     --call-color: #32CC77;
+    --paragraph-width: 500px;
 }
 
 .primary--color {
@@ -56,6 +57,12 @@ p {
     margin-right: auto;
     padding-top: 15em;
     padding-bottom: 15em;
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
 }
 
 .section {
@@ -68,6 +75,44 @@ p {
     background: var(--secondary-color);
     color: var(--third-color);
 }
+
+.paragraph {
+    width: var(--paragraph-width);
+}
+
+.short-paragraph {
+    width: calc(var(--paragraph-width) - var(--paragraph-width) / 3);
+}
+
+.column--start {
+    align-items: flex-start;
+}
+
+.column--end {
+    align-items: flex-end;
+}
+
+.section__title {
+    width: 100%;
+    text-align: center;
+    text-decoration: underline var(--primary-color);
+    margin-bottom: 2em;
+}
+
+.marcin {
+    width: 150px;
+    height: 150px;
+    background: url('../content/marcin.jpg') no-repeat;
+    border: 1px solid var(--secondary-color);
+}
+
+.dominik {
+    width: 150px;
+    height: 150px;
+    background: url('../content/dominik.jpg') no-repeat;
+    border: 1px solid var(--secondary-color);
+}
+
 
 .hero__section {
     position: relative;
@@ -177,13 +222,6 @@ nav {
     height: auto;
 }
 
-
-.section__title {
-    width: 100%;
-    text-align: center;
-    text-decoration: underline var(--primary-color);
-}
-
 .feature__list {
     display: flex;
     height: 100%;
@@ -203,7 +241,7 @@ nav {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 6em;
+    margin-bottom: 5em;
 }
 
 .feature__list__item h2 {
@@ -235,7 +273,6 @@ nav {
 .feedback__devide {
     display: flex;
     justify-content: center;
-    margin-top: 7em;
     align-items: center;
 }
 
@@ -247,21 +284,21 @@ nav {
 }
 
 .feedback__list__item {
-    display: flex;
     min-width: 250px;
     min-height: 20px;
-    justify-content: space-between;
-    align-items: center;
     padding: 1em 20px;
     border-radius: 5px;
     border-bottom: 1px solid white;
 }
 
 .feedback__list__item:hover {
-    background: rgba(214, 214, 214,0.4);
+    background: rgba(214, 214, 214,0.3);
     cursor: pointer;
 }
 
+.feedback__list__item h4 {
+    margin-top: 10px;
+}
 
 .feedback__list__image {
     width: 50px;
@@ -277,7 +314,7 @@ nav {
 }
 
 .feedback__current--choose {
-    background: rgba(214, 214, 214,0.4);
+    background: rgba(214, 214, 214,0.3);
 }
 
 .feedback__image {
@@ -295,3 +332,34 @@ nav {
     margin-top: 1em;
     max-width: 500px;
 }
+
+.team__section{
+}
+
+.team__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team__list__item {
+    width: 40%;
+    margin-left: 1em;
+    margin-right: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team__list__item h2 {
+    margin-top: 1.2em;
+    margin-bottom: 5px;
+}
+
+.team__list__item i {
+    margin-top: 5px;
+}
+
+.team__list__item p {
+    margin-top: 2em;
+}
+
