@@ -2,9 +2,24 @@
     --primary-color: #FFA63F;
     --secondary-color: #363636;
     --third-color: white;
-    --call-button-background: #32CC77;
+    --call-color: #32CC77;
 }
 
+.primary--color {
+    color: var(--primary-color);
+}
+
+.secondary--color {
+    color: var(--secondary-color);
+}
+
+.third--color {
+    color: var(--third-color);
+}
+
+.call--color {
+    color: var(--call-color)
+}
 
 @font-face {
     font-family: staatlichesRegular;
@@ -36,7 +51,7 @@ p {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 15em;
@@ -140,7 +155,7 @@ nav {
     max-width: 200px;
     padding: 0.8em 1.2em;
     margin-top: 2em;
-    background: var(--call-button-background);
+    background: var(--call-color);
     /* border: var(--call-button-border); */
     border-radius: 5px;
     font-family: staatlichesRegular;
@@ -210,3 +225,73 @@ nav {
 
 
 
+.rounded__image {
+    background-size: cover;
+    background-position: center;
+    background-clip: padding-box;
+    border-radius: 50%;
+}
+
+.feedback__devide {
+    display: flex;
+    justify-content: center;
+    margin-top: 7em;
+    align-items: center;
+}
+
+.feedback__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 4em;
+}
+
+.feedback__list__item {
+    display: flex;
+    min-width: 250px;
+    min-height: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 20px;
+    border-radius: 5px;
+    border-bottom: 1px solid white;
+}
+
+.feedback__list__item:hover {
+    background: rgba(214, 214, 214,0.4);
+    cursor: pointer;
+}
+
+
+.feedback__list__image {
+    width: 50px;
+    height: 50px;
+    background-image: url('../content/adult-beard-boy-220453.jpg');
+}
+
+.feedback__current {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 4em;
+}
+
+.feedback__current--choose {
+    background: rgba(214, 214, 214,0.4);
+}
+
+.feedback__image {
+    width: 150px;
+    height: 150px;
+    background-image: url('../content/adult-beard-boy-220453.jpg');
+    border: 5px solid var(--primary-color);
+}
+
+.feedback__current h2 {
+    margin-top: 1.4em;
+}
+
+.feedback__current p {
+    margin-top: 1em;
+    max-width: 500px;
+}

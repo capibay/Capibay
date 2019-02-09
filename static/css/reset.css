@@ -50,6 +50,11 @@ a {
     color: black;
 }
 
+p {
+  line-height: 1.6;
+  text-align: justify;
+}
+
 body {
     font-size: 100%;
   }
