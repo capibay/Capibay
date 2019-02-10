@@ -224,6 +224,7 @@ nav {
 
 .feature__list {
     display: flex;
+    flex-wrap: wrap;
     height: 100%;
     width: 100%;
     flex-wrap: wrap;
@@ -238,6 +239,7 @@ nav {
 
 .feature__list__item {
     width: 40%;
+    min-width: 500px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -261,8 +263,6 @@ nav {
     max-width: 200px;
 }
 
-
-
 .rounded__image {
     background-size: cover;
     background-position: center;
@@ -274,6 +274,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .feedback__list {
@@ -333,9 +334,6 @@ nav {
     max-width: 500px;
 }
 
-.team__section{
-}
-
 .team__list {
     display: flex;
     flex-wrap: wrap;
@@ -343,6 +341,7 @@ nav {
 
 .team__list__item {
     width: 40%;
+    min-width: 450px;
     margin-left: 1em;
     margin-right: 1em;
     display: flex;
@@ -363,3 +362,71 @@ nav {
     margin-top: 2em;
 }
 
+.social__panel {
+    margin-top: 2em;
+    min-width: 300px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.social__panel img {
+    min-width: 50px;
+    margin-left: 5px;
+    height: auto;
+}
+
+.projects__section {
+    background: linear-gradient(288deg, rgba(2,0,36,1) 0%, rgba(50,204,119,1) 0%, rgba(0,144,155,1) 94%);
+    color: white;
+}
+
+.projects__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project__list__item {
+    width: 350px;
+    min-height: 250px;
+    margin-bottom: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border: 2px solid var(--primary-color);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    z-index: 3;
+    position: relative;
+}
+
+.project__list__item * {
+    position: relative;
+    z-index: 3;
+}
+
+.project__list__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.3);
+    background: url('../content/beautiful-brunette-cute-774909.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.project__list__item:hover {
+    cursor: pointer;
+}
+
+.project__list__item h3 {
+    width: 100%;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.project__list__item p {
+    padding: 1em 2em;
+}
