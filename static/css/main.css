@@ -450,7 +450,7 @@ nav {
     border: none;
 }
 
-.form-group {
+.form__group {
     display: flex;
     flex-direction: column;
     min-width: 400px;
@@ -458,27 +458,26 @@ nav {
     flex-wrap: wrap;
 }
 
-.form-group label {
+.form__group label {
     font-family: 'ralewayMedium';
     margin-bottom: 7px;
 }
 
-.form-group input {
+.form__group input {
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 18px;
     box-sizing: border-box;
-    max-height: 30px;
     min-width: 220px;
     max-width: 85%;
 }
 
-.form-group input:focus {
-    border: 3px solid var(--primary-color);
+.form__group input:focus, textarea:focus {
+    outline: 2px solid var(--primary-color);
     box-sizing: border-box;
 }
 
-.form-group textarea {
+.form__group textarea {
     min-width: 220px;
     max-width: 85%;
     border-radius: 5px;
@@ -505,7 +504,7 @@ nav {
 @media screen and (max-width: 980px) {
     .team__list__item {
         margin-bottom: 4em;
-        min-width: 200px;
+        min-width: 0;
     }
     .feedback__list {
         margin-left: 0;
@@ -518,7 +517,116 @@ nav {
 }
 
 @media screen and (max-width: 800px) {
+
+    * {
+        min-width: 0;
+    }
+
+    .form__contact_credentials {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .form__group {
+        min-width: 350px;
+    }
+
+    .section {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .container {
+        padding-top: 7em;
+        padding-bottom: 7em;
+    }
+
+    .title {
+        max-width: 90vw;
+    }
+
+    .hero__wrapper {
+        justify-content: flex-start;
+    }
+
+    .feature__list__item {
+        width: 90%;
+        min-width: 0;
+    }
+
     .contact__map {
         margin-top: 4em;
+    }
+    .hero {
+        width: 90vw;
+    }
+    .subtitle {
+        max-width: 90vw;
+        width: 90vw;
+    }
+
+    .team__list__item {
+        min-width: 400px;
+    }
+
+}
+
+
+@media screen and (max-width: 400px) {
+
+    * {
+        min-width: 0;
+    }
+
+    .form__contact_credentials {
+        padding: 0;
+    }
+
+    .form__group {
+        min-width: 200px;
+    }
+
+    .form__group input,textarea {
+        min-width: 100px !important;
+    }
+
+    .feedback__list {
+        width: 100%;
+    }
+
+    .feedback__list__item {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .social__panel {
+        padding-left: 6em;
+    }
+
+    .short-paragraph {
+        width: 100%;
+    }
+
+    .feedback__current {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .section {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .container {
+        padding-top: 100px;
+        padding-bottom: 100px
+    }
+
+    .team__list__item {
+        min-width: 200px;
     }
 }
