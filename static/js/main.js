@@ -1,5 +1,6 @@
 $(document).ready(function () {
-
+    let isMenuOpen = false
+    
     let $win = $(window),
         $hero = $('.hero'),
         $nav = $('nav'),
@@ -28,7 +29,7 @@ $(document).ready(function () {
 
     //     }
     // })
-    $('.nav__list__item a').on('click', function (event) {
+    $('.hero__section a').on('click', function (event) {
         if (this.hash !== "") {
             event.preventDefault()
             let hash = this.hash
@@ -39,6 +40,39 @@ $(document).ready(function () {
             })
         }
     })
+
+    $('.menu__icon').on("click", function () {
+        isMenuOpen = !isMenuOpen
+        $('.menu__section').slideToggle("fast")
+    })
+
+    $(window).on("resize", function () {
+        if ($(window).width() > 1100 && isMenuOpen) {
+            $('.menu__section').slideUp("fast")
+            isMenuOpen = !isMenuOpen
+        }
+    })
+
+    $(window).on("scroll", function () {
+        stickyNav();
+        if (isMenuOpen) {
+            $('.menu__section').slideUp("fast")
+            isMenuOpen = !isMenuOpen
+        }
+    })
+    var stickyNavTop = $('nav').offset().top;
+
+    var stickyNav = function () {
+        var scrollTop = $(window).scrollTop(); // our current vertical position from the top
+
+        if (scrollTop > stickyNavTop) {
+            $('nav').addClass('sticky');
+        } else {
+            $('nav').removeClass('sticky');
+        }
+    };
+    stickyNav();
+    
 
 })
 

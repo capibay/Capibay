@@ -23,6 +23,18 @@
     color: var(--call-color)
 }
 
+.sticky {
+    position: fixed;
+    width: 100vw;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+    background: rgb(255, 255, 255);
+    border-bottom: 1px solid var(--secondary-color);
+  }
+
 @font-face {
     font-family: staatlichesRegular;
     src: url('../fonts/Staatliches-Regular.ttf');
@@ -149,6 +161,36 @@ nav {
     align-items: center;
     position: relative;
     z-index: 2; 
+}
+
+body {
+    position: relative;
+}
+
+.menu__section {
+    display: none;
+    position: relative;
+    z-index: 4;
+    width: 100vw;
+    margin-bottom: 3em;
+    left: 0;
+}
+
+.menu__list {
+    background: var(--third-color);
+}
+
+.menu__list__item {
+    padding: 1em 1.2em;
+    font-size: 1.2em;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.menu__list__item a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: staatlichesRegular;
 }
 
 .menu__icon {
@@ -508,7 +550,6 @@ nav {
         max-width: 3em;
         height: auto;
     }
-
 }
 
 @media screen and (max-width: 980px) {
@@ -530,6 +571,10 @@ nav {
 
     * {
         min-width: 0;
+    }
+
+    .menu__section {
+        left: -20px;   
     }
 
     .form__contact_credentials {
@@ -593,6 +638,10 @@ nav {
         min-width: 0;
     }
 
+    .menu__section {
+        left: -10px;   
+    }
+
     .project__list__item p {
         padding: 20px 10px;
     }
@@ -651,3 +700,4 @@ nav {
         min-width: 200px;
     }
 }
+
