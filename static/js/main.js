@@ -22,7 +22,23 @@ $(document).ready(function () {
         $hero_title.css({ marginTop: `${(planHeight - realHeroHeight) / 2 - 40}px` })
     }
 
-    
+    // let $menu_icon = $('.menu__icon')
+    // $($menu_icon).on('click', function () {
+    //     if ($(window).width() <= 1100) {
+
+    //     }
+    // })
+    $('.nav__list__item a').on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault()
+            let hash = this.hash
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 600, function () {
+                window.location.hash = hash
+            })
+        }
+    })
 
 })
 
