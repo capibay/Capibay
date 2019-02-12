@@ -21,5 +21,8 @@ $(document).ready(function () {
         $hero_title.parent().css({ position: 'relative' })
         $hero_title.css({ marginTop: `${(planHeight - realHeroHeight) / 2 - 40}px` })
     }
+
+    
+
 })
 

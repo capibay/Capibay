@@ -55,6 +55,11 @@ p {
   text-align: justify;
 }
 
+input {
+  border: none;
+  box-shadow: none;
+}
+
 body {
     font-size: 100%;
   }

@@ -3,6 +3,7 @@
     --secondary-color: #363636;
     --third-color: white;
     --call-color: #32CC77;
+    --call-color-hover: #00d696;
     --paragraph-width: 500px;
 }
 
@@ -67,8 +68,9 @@ p {
 
 .section {
     min-height: 100vh;
-    max-width: 100vw;
+    width: 100vw;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .contrast__section {
@@ -120,7 +122,7 @@ p {
     background: url('../content/wallpaper.jpg') no-repeat;
     background-size: cover;
     background-position: center;
-    color: white;
+    color: var(--third-color);
 }
 
 .hero__section__bg {
@@ -178,6 +180,8 @@ nav {
     z-index: 2;
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .hero {
@@ -212,7 +216,8 @@ nav {
 }
 
 .hero__call_button:hover {
-    background: #00d696;
+    background: var(--call-color-hover);
+    cursor: pointer;
 }
 
 .icon-flag {
@@ -274,7 +279,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
 }
 
 .feedback__list {
@@ -377,7 +382,7 @@ nav {
 
 .projects__section {
     background: linear-gradient(288deg, rgba(2,0,36,1) 0%, rgba(50,204,119,1) 0%, rgba(0,144,155,1) 94%);
-    color: white;
+    color: var(--third-color);
 }
 
 .projects__list {
@@ -429,4 +434,91 @@ nav {
 
 .project__list__item p {
     padding: 1em 2em;
+}
+
+.contact__devide {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form__contact_credentials {
+    padding: 1em 3em;
+}
+
+.form__contact_credentials button {
+    border: none;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+}
+
+.form-group label {
+    font-family: 'ralewayMedium';
+    margin-bottom: 7px;
+}
+
+.form-group input {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 18px;
+    box-sizing: border-box;
+    max-height: 30px;
+    min-width: 220px;
+    max-width: 85%;
+}
+
+.form-group input:focus {
+    border: 3px solid var(--primary-color);
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    min-width: 220px;
+    max-width: 85%;
+    border-radius: 5px;
+    height: 15em;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.contact__map iframe{
+    min-width: 30vw;
+    min-height: 400px;
+}
+
+.contact__info__more {
+    margin-top: 2em;
+}
+
+@media screen and (max-width: 1100px) {
+    .nav__list {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .team__list__item {
+        margin-bottom: 4em;
+        min-width: 200px;
+    }
+    .feedback__list {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .feedback__current {
+        margin-right: 2em;
+        margin-bottom: 4em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .contact__map {
+        margin-top: 4em;
+    }
 }
