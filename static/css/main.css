@@ -573,6 +573,10 @@ body {
         min-width: 0;
     }
 
+    .icon-flag {
+        min-width: 30px;
+    }
+
     .menu__section {
         left: -20px;   
     }

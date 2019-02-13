@@ -85,5 +85,16 @@ $(document).ready(function () {
     stickyNav();
 
 
+    let $current__choose = $('.feedback__current--choose')
+    let $feedback__list__item = $('.feedback__list__item')
+
+    $($feedback__list__item).on('click', function (e) {
+        if (!$(this).hasClass('feedback__current--choose')) {
+            $('.feedback__list__item').removeClass('feedback__current--choose')
+            $(this).addClass('feedback__current--choose')
+        } 
+    })
+
+
 })
 
