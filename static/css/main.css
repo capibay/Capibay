@@ -24,7 +24,7 @@
 }
 
 .sticky {
-    position: fixed;
+    position: fixed !important;
     width: 100vw;
     box-sizing: border-box;
     left: 0;

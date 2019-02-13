@@ -1,6 +1,6 @@
 $(document).ready(function () {
     let isMenuOpen = false
-    
+
     let $win = $(window),
         $hero = $('.hero'),
         $nav = $('nav'),
@@ -67,12 +67,23 @@ $(document).ready(function () {
 
         if (scrollTop > stickyNavTop) {
             $('nav').addClass('sticky');
+            //$('.menu__section').style.position = 'fixed'
+            $('.menu__section').addClass('sticky')
+            $('.menu__section').css({
+                top: $('nav').innerHeight() + 'px',
+                left: '0'
+            })
         } else {
             $('nav').removeClass('sticky');
+            $('.menu__section').removeClass('sticky');
+            $('.menu__section').css({
+                top: '0',
+                left: '-20px'
+            })
         }
     };
     stickyNav();
-    
+
 
 })
 
