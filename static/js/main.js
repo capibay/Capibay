@@ -33,11 +33,18 @@ $(document).ready(function () {
         if (this.hash !== "") {
             event.preventDefault()
             let hash = this.hash
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 600, function () {
-                window.location.hash = hash
-            })
+            console.log(hash);
+
+            // $('html, body').animate({
+            //     scrollTop: $(hash).offset().top
+            // }, 600, function () {
+            //     
+            //     console.log(hash);
+            // })
+            document.querySelector(hash).scrollIntoView({
+                behavior: 'smooth'
+            });
+            // window.location.hash = hash;
         }
     })
 
@@ -92,7 +99,7 @@ $(document).ready(function () {
         if (!$(this).hasClass('feedback__current--choose')) {
             $('.feedback__list__item').removeClass('feedback__current--choose')
             $(this).addClass('feedback__current--choose')
-        } 
+        }
     })
 
 
